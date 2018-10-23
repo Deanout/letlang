@@ -224,13 +224,13 @@
        ("-" "(" expression "," expression ")")
        diff-exp)
       
-      ; if-exp : (if a then b else c)
+      ; if-exp : if a then b else c
       (expression
        ("if" expression "then" expression "else" expression)
        if-exp)
       
 
-      ; let-exp : (let y = a in b)
+      ; let-exp : let y = a in b
       (expression
        ("let" identifier "=" expression "in" expression)
        let-exp)))
