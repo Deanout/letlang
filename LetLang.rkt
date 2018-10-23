@@ -53,7 +53,7 @@
 ; A program is an expression.
 ; Just as a note, an expression is not defined yet. See next definition
 ; for what an expression is.
-(define-datatype program program?
+#;(define-datatype program program?
   (a-program
    (exp1 expression?)))
 ; An expression comes in one of six forms.
@@ -63,7 +63,7 @@
 ; diff-exp  : Exp * Exp       -> Exp
 ; var-exp   : Var             -> Exp
 ; let-exp   : Var * Exp * Exp -> Exp
-(define-datatype expression expression?
+#;(define-datatype expression expression?
   (const-exp
    (num number?))
   (var-exp
@@ -241,7 +241,7 @@
 ; by using the grammar's definition of them.
 ; This means you don't have to type our your define-datatypes,
 ; but it makes it feel like you're missing some steps.
-;(sllgen:make-define-datatypes the-lexical-spec the-grammar)
+(sllgen:make-define-datatypes the-lexical-spec the-grammar)
 
 ; This allows you to print out the datatype definitions,
 ; which will let you remove the mystery that the previous
